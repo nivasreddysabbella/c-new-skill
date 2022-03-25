@@ -1,0 +1,48 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    vector<int>ds;
+    for (int i=1;i<=n;i++){
+        ds.push_back(i);
+        //ds.pushback
+    }
+    // sorting functions
+    sort(ds.begin(),ds.end());  // in ascending order of given list(sorted)
+    sort(ds.begin(),ds.end(),greater<int>()); //in descending order of (reverse sorted)
+    //
+    //sort(arr,arr+n);  //we can sort from arr location up to arr+n location
+    
+    //used for finding the element in the list
+
+    int target;
+    cin>>target;
+    auto ni=find(ds.begin(),ds.end(),target);
+    if(ni!=ds.end()){
+        cout<<"element found";
+    }
+    else{
+        cout<<"element not found";
+    }
+    for(auto i:ds){
+        cout<<i<<" ";
+
+    }
+
+    // in a list finding the first occurence index of a element
+    // {1,2,3,4,4,4,4,5,5,6,7} tell the first occurance of 4 at loc 4
+    //#not working
+    int ind=lower_bound(ds.begin(),ds.end(),target)-ds.begin();
+    cout<<ind;
+
+    vet.pop_back(); // remove the last element
+    //v1={1,2}  v2={4,5}
+    v1.swap(v2);//v2={1,2}  v1={4,5}
+    vet.clear(); //erase all the variable
+    cout<<vet.empty();//gives true if vector is empty else false
+    vet.erase(vet.begin());//first element is erased
+    vet.erase(vet.begin()+1,2,10);  //now 2 tens are formed from the 2nd index
+    vector<int>copy(2,10);//(10,10)
+}
