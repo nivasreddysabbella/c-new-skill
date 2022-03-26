@@ -1,0 +1,28 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //multiset
+    //for erase of all one's
+
+    queue<int>qu;//FIFO-first in first out
+    qu.push(1);
+    qu.push(2);
+    qu.emplace(5);
+    //qu.back()+=4;
+    cout<<qu.back()<<endl;
+    qu.pop();
+    cout<<qu.back()<<endl;
+    qu.pop();
+    cout<<qu.front()<<endl;
+    //priority queue
+    priority_queue<int>pq; //it stores in descending order
+    pq.push(1); //{1}
+    pq.push(10);//{10,1}
+    pq.push(5);//{10,5,1}
+    pq.emplace(8);//{10,8,5,1}
+    cout<<pq.top()<<endl;//print 10
+    pq.pop();//ten will be removed
+    cout<<pq.top()<<endl;// 8 will be printed
+
+}
