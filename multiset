@@ -1,0 +1,27 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //multiset
+    //for erase of all one's
+
+    multiset<int>ms;
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(1);
+    ms.insert(1);
+    for(auto it:ms){
+        cout<<it<<" ";}     //1 1 1 2
+    ms.erase(ms.find(1));   //find the first position of 1 and deleting the one
+    cout<<endl;
+    for(auto it:ms){
+        cout<<it<<" ";      //1 1 2
+    }
+    ms.erase(1);    //delete all the 1 in the list
+    cout<<endl;
+    for(auto it:ms){
+        cout<<it<<"ni"<<endl;   //2
+    }
+    int d=ms.count(1);    //gives the count of 1 in multiset
+    cout<<d;                    //0
+}
